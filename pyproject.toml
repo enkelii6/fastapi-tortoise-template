@@ -35,3 +35,6 @@ exclude = [
 line-length = 120
 indent-width = 4
 target-version = "py311"
+
+[tool.ruff.quotes]
+prefer-single = true
