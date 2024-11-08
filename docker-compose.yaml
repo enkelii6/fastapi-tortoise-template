@@ -13,7 +13,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - .:/code
+      - .:/app
     command: ["python", "-m", "code.app"]
     depends_on:
       db:
@@ -23,12 +23,8 @@ services:
     image: postgres:16-alpine
     environment:
       POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
     ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+      - "5433:5432"
     healthcheck:
       test: [ "CMD", "pg_isready", "-U", "postgres"]
-
-volumes:
-  pgdata:
