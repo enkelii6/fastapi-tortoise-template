@@ -17,10 +17,10 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 
-@app.get("/health/")
+@app.get('/health/')
 async def health():
     return Response(status_code=status.HTTP_200_OK)
 
 
-if __name__ == "__main__":
-    uvicorn.run("code.app:app", host="0.0.0.0", port=8000, reload=True)
+if __name__ == '__main__':
+    uvicorn.run('code.app:app', host='0.0.0.0', port=8000, reload=True)
