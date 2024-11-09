@@ -4,36 +4,10 @@ location = "./migrations"
 src_folder = "./."
 
 [tool.ruff]
-exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".git-rewrite",
-    ".hg",
-    ".ipynb_checkpoints",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pyenv",
-    ".pytest_cache",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    ".vscode",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "site-packages",
-    "venv",
-]
+src = ["code"]
+show-fixes = true
 line-length = 120
-target-version = "py311"
 
-[tool.ruff.format]
-quote-style = "single"
+[tool.tuff.lint]
+extend-select = ["C4", "SIM", "TCH"]
+ignore = []
