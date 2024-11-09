@@ -16,8 +16,7 @@ services:
       - .:/app
     command: ["python", "-m", "code.app"]
     depends_on:
-      db:
-        condition: service_healthy
+      - db
 
   db:
     image: postgres:16-alpine
