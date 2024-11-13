@@ -5,9 +5,18 @@ src_folder = "./."
 
 [tool.ruff]
 src = ["code"]
-show-fixes = true
-line-length = 120
+target-version = "py311"
+line-length = 110
+fix = true
+select = ["E", "F", "W", "C", "D", "I", "N", "Q"]
+ignore = ["D203", "D213", "D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107"]
 
-[tool.tuff.lint]
-extend-select = ["C4", "SIM", "TCH"]
-ignore = []
+[tool.ruff.flake8-quotes]
+inline-quotes = "single"
+
+[tool.ruff.isort]
+combine-as-imports = true
+
+[tool.ruff.per-file-ignores]
+"tests/*.py" = ["D", "E501"]
+"migrations/*.py" = ["ALL"]

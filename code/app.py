@@ -1,10 +1,9 @@
+from code.config import TORTOISE_CONFIG
 from contextlib import asynccontextmanager
 
 import uvicorn
 from fastapi import FastAPI, Response, status
 from tortoise import Tortoise
-
-from code.config import TORTOISE_CONFIG
 
 
 @asynccontextmanager
