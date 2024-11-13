@@ -11,6 +11,7 @@ node_modules/
 *.pyo
 *.__pycache__
 *.env
+.venv
 
 # Java
 *.class

@@ -14,7 +14,7 @@ services:
       - "8000:8000"
     volumes:
       - .:/app
-    command: ["python", "-m", "code.app"]
+    command: ["python", "-m", "src.app"]
     depends_on:
       - db
 

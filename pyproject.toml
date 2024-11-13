@@ -1,10 +1,10 @@
 [tool.aerich]
-tortoise_orm = "code.config.TORTOISE_CONFIG"
+tortoise_orm = "src.config.TORTOISE_CONFIG"
 location = "./migrations"
 src_folder = "./."
 
 [tool.ruff]
-src = ["code"]
+src = ["src"]
 target-version = "py311"
 line-length = 110
 fix = true

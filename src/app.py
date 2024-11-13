@@ -1,9 +1,10 @@
-from code.config import TORTOISE_CONFIG
 from contextlib import asynccontextmanager
 
 import uvicorn
 from fastapi import FastAPI, Response, status
 from tortoise import Tortoise
+
+from src.config import TORTOISE_CONFIG
 
 
 @asynccontextmanager
@@ -22,4 +23,4 @@ async def health():
 
 
 if __name__ == '__main__':
-    uvicorn.run('code.app:app', host='0.0.0.0', port=8000, reload=True)
+    uvicorn.run('src.app:app', host='0.0.0.0', port=8000, reload=True)
