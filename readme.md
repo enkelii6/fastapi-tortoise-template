@@ -8,6 +8,6 @@
 ```
 ## This will activate ```ruff check --fix``` anytime you want to commit
 
-### TODO: .dockerignore, github actions ci/cd, helm values
+### TODO: tests
 
 ### P.S. feel free to open PR with changes
